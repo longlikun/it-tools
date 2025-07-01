@@ -35,11 +35,11 @@ function onUpdateFavoriteTools() {
           >GitHub</a>
           {{ $t('home.follow.p2') }}
           <a
-            href="https://x.com/ittoolsdottech"
+            href="https://blog.eimoon.com"
             rel="noopener"
             target="_blank"
-            :aria-label="$t('home.follow.twitterXAccount')"
-          >X</a>.
+            :aria-label="$t('home.follow.blogAccount')"
+          >blog</a>.
           {{ $t('home.follow.thankYou') }}
           <n-icon :component="IconHeart" />
         </ColoredCard>

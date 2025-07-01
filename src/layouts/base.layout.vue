@@ -2,7 +2,7 @@
 import { NIcon, useThemeVars } from 'naive-ui';
 
 import { RouterLink } from 'vue-router';
-import { Heart, Home2, Menu2 } from '@vicons/tabler';
+import { Book, Heart, Home2, Menu2 } from '@vicons/tabler';
 
 import { storeToRefs } from 'pinia';
 import HeroGradient from '../assets/hero-gradient.svg?component';
@@ -97,20 +97,26 @@ const tools = computed<ToolCategory[]>(() => [
           :aria-label="$t('home.toggleMenu')"
           @click="styleStore.isMenuCollapsed = !styleStore.isMenuCollapsed"
         >
-          <NIcon size="25" :component="Menu2" />
+          <NIcon size="25" :component="Menu2" color="#9CA3AF" />
         </c-button>
 
         <c-tooltip :tooltip="$t('home.home')" position="bottom">
           <c-button to="/" circle variant="text" :aria-label="$t('home.home')">
-            <NIcon size="25" :component="Home2" />
+            <NIcon size="25" :component="Home2" color="#42b883" />
           </c-button>
         </c-tooltip>
-
-        <c-tooltip :tooltip="$t('home.uiLib')" position="bottom">
+        <c-tooltip :tooltip="$t('home.nav.blog')" position="bottom">
+          <c-button href="https://blog.eimoon.com" target="_blank" circle variant="text" :aria-label="$t('home.nav.blog')">
+            <!-- <NIcon size="25" :component="Book2" /> -->
+            <NIcon size="25" :component="Book" color="#059669" />
+          </c-button>
+        </c-tooltip>
+        <!-- ui 库 -->
+        <!-- <c-tooltip :tooltip="$t('home.uiLib')" position="bottom">
           <c-button v-if="config.app.env === 'development'" to="/c-lib" circle variant="text" :aria-label="$t('home.uiLib')">
             <icon-mdi:brush-variant text-20px />
           </c-button>
-        </c-tooltip>
+        </c-tooltip> -->
 
         <command-palette />
 
@@ -120,7 +126,7 @@ const tools = computed<ToolCategory[]>(() => [
           <NavbarButtons v-if="!styleStore.isSmallScreen" />
         </div>
 
-        <c-tooltip position="bottom" :tooltip="$t('home.support')">
+        <!-- <c-tooltip position="bottom" :tooltip="$t('home.support')">
           <c-button
             round
             href="https://www.buymeacoffee.com/cthmsst"
@@ -133,7 +139,7 @@ const tools = computed<ToolCategory[]>(() => [
             {{ $t('home.buyMeACoffee') }}
             <NIcon v-if="!styleStore.isSmallScreen" :component="Heart" ml-2 />
           </c-button>
-        </c-tooltip>
+        </c-tooltip> -->
       </div>
       <slot />
     </template>
