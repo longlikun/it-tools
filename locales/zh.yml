@@ -11,13 +11,11 @@ home:
   support: '支持 IT 工具开发'
   buyMeACoffee: '赞助'
   follow:
-    title: '关注我们'
-    p1: '给我们 Star'
-    githubRepository: 'GitHub 仓库'
-    p2: '关注我们的'
-    twitterXAccount: 'IT-Tools X 账号'
-    thankYou: '感谢您的支持！'
-    blogAccount: "访问我的博客"
+    title: '遇到技术难题？'
+    p1: '更多技术文章。访问'
+    blogName: '我的博客'
+    p2: '查看详细教程和文章！'
+    blogAccount: '访问我的博客'
   nav:
     github: 'GitHub 仓库'
     githubRepository: 'GitHub 仓库'
