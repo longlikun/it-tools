@@ -73,6 +73,14 @@ function onUpdateFavoriteTools() {
         </div>
       </div>
 
+      <div class="mt-25px">
+        <AdSense
+          slot="5621666417"
+          format="fluid"
+          layout-key="-ef+6j-32-9t+t8"
+        />
+      </div>
+
       <h3 class="mb-5px mt-25px text-neutral-400 font-500">
         {{ $t('home.categories.allTools') }}
       </h3>

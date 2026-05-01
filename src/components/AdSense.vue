@@ -8,12 +8,14 @@ const props = withDefaults(defineProps<{
   format?: string
   responsive?: boolean
   layout?: string
+  layoutKey?: string
   style?: string
 }>(), {
   client: 'ca-pub-7372212183953468',
   format: 'auto',
   responsive: true,
   layout: '',
+  layoutKey: '',
   style: 'display:block',
 });
 
@@ -47,6 +49,7 @@ watch(() => route.fullPath, () => {
     :data-ad-slot="slot"
     :data-ad-format="format"
     :data-ad-layout="layout || undefined"
+    :data-ad-layout-key="layoutKey || undefined"
     :data-full-width-responsive="responsive ? 'true' : 'false'"
   />
 </template>
