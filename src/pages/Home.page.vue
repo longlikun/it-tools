@@ -3,7 +3,6 @@ import { IconDragDrop, IconHeart } from '@tabler/icons-vue';
 import { useHead } from '@vueuse/head';
 import { computed } from 'vue';
 import Draggable from 'vuedraggable';
-import AdSense from '../components/AdSense.vue';
 import ColoredCard from '../components/ColoredCard.vue';
 import ToolCard from '../components/ToolCard.vue';
 import { useToolStore } from '@/tools/tools.store';
@@ -73,23 +72,11 @@ function onUpdateFavoriteTools() {
         </div>
       </div>
 
-      <div class="mt-25px">
-        <AdSense
-          slot="5621666417"
-          format="fluid"
-          layout-key="-ef+6j-32-9t+t8"
-        />
-      </div>
-
       <h3 class="mb-5px mt-25px text-neutral-400 font-500">
         {{ $t('home.categories.allTools') }}
       </h3>
       <div class="grid grid-cols-1 gap-12px lg:grid-cols-3 md:grid-cols-3 sm:grid-cols-2 xl:grid-cols-4">
         <ToolCard v-for="tool in toolStore.tools" :key="tool.name" :tool="tool" />
-      </div>
-
-      <div class="mt-32px">
-        <AdSense slot="5516407985" />
       </div>
     </div>
   </div>
